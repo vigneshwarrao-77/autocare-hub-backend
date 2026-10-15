@@ -1,6 +1,3 @@
-
-package AutoCareHub;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -15,12 +12,10 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins(
-                            "https://autocarehub12.netlify.app"
-                        )
+                        .allowedOrigins("https://autocarehub12.netlify.app")
                         .allowedMethods(
-                            "GET", "POST", "PUT",
-                            "DELETE", "PATCH", "OPTIONS"
+                                "GET", "POST", "PUT",
+                                "PATCH", "DELETE", "OPTIONS"
                         )
                         .allowedHeaders("*");
             }
