@@ -5,7 +5,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-@RestController @RequestMapping("/api/bookings") @CrossOrigin(origins="http://localhost:5173")
+@RestController @RequestMapping("/api/bookings") 
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://autocarehub12.netlify.app"
+})
+
 public class BookingController {
  private final BookingRepository repository;
  public BookingController(BookingRepository repository){this.repository=repository;}

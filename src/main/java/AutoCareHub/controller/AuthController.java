@@ -9,7 +9,12 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "http://localhost:5173")
+
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://autocarehub12.netlify.app"
+})
+
 public class AuthController {
     private final UserRepository userRepository;
     public AuthController(UserRepository userRepository) { this.userRepository = userRepository; }

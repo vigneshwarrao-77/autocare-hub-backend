@@ -8,7 +8,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/customers")
-@CrossOrigin(origins = "http://localhost:5173")
+
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://autocarehub12.netlify.app"
+})
+
 public class CustomerController {
 
     private final CustomerRepository customerRepository;
